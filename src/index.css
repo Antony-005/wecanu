@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Canopy — deep forest, near-black but with green undertone (not the generic pure-black) */
+  --color-canopy: #14190F;
+  --color-canopy-light: #1F2718;
+
+  /* Leaf greens, pulled from the logo's foliage */
+  --color-fern: #3C6B2F;
+  --color-fern-light: #5C8A45;
+
+  /* Ember — the logo's warm gradient, orange through gold */
+  --color-ember: #D9531E;
+  --color-gold: #E8A33D;
+
+  /* Parchment — a field-journal cream, not a flat white */
+  --color-parchment: #F6F1E2;
+  --color-parchment-dim: #ECE3CC;
+
+  --color-ink: #22261B;
+
+  --font-display: 'Zilla Slab', serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-script: 'Caveat', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
