@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { AtSign, XIcon, PlaySquare, Users, Music2, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaInstagram, FaXTwitter, FaYoutube, FaFacebook, FaTiktok } from "react-icons/fa6";
 import { club, socials, builder } from "../data/content";
 import logo from "../assets/logo/logo-black-bg.jpg";
 import builderPhoto from "../assets/images/builder/antony.jpg";
@@ -41,11 +42,11 @@ export default function Footer() {
         <div>
           <h4 className="font-display text-lg mb-3 text-gold">Follow</h4>
           <div className="flex gap-4">
-            <a href={socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-ember"><AtSign size={20} /></a>
-            <a href={socials.x} target="_blank" rel="noreferrer" aria-label="X (Twitter)" className="hover:text-ember"><XIcon size={20} /></a>
-            <a href={socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-ember"><PlaySquare size={20} /></a>
-            <a href={socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-ember"><Users size={20} /></a>
-            <a href={socials.tiktok} target="_blank" rel="noreferrer" aria-label="TikTok" className="hover:text-ember"><Music2 size={20} /></a>
+            <a href={socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-ember"><FaInstagram size={20} /></a>
+            <a href={socials.x} target="_blank" rel="noreferrer" aria-label="X (Twitter)" className="hover:text-ember"><FaXTwitter size={20} /></a>
+            <a href={socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-ember"><FaYoutube size={20} /></a>
+            <a href={socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-ember"><FaFacebook size={20} /></a>
+            <a href={socials.tiktok} target="_blank" rel="noreferrer" aria-label="TikTok" className="hover:text-ember"><FaTiktok size={20} /></a>
           </div>
         </div>
       </div>

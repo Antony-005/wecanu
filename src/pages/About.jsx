@@ -64,14 +64,26 @@ export default function About() {
           across Kenya's conservation and environmental sector.
         </p>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {partners.map((p) => (
-            <div
-              key={p}
-              className="border border-ink/10 rounded-xl px-4 py-3 text-sm text-ink/75 bg-parchment-dim"
-            >
-              {p}
-            </div>
-          ))}
+          {partners.map((p) =>
+            p.url ? (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="border border-ink/10 rounded-xl px-4 py-3 text-sm text-fern bg-parchment-dim hover:bg-parchment-dim/70 hover:underline transition-colors"
+              >
+                {p.name}
+              </a>
+            ) : (
+              <div
+                key={p.name}
+                className="border border-ink/10 rounded-xl px-4 py-3 text-sm text-ink/75 bg-parchment-dim"
+              >
+                {p.name}
+              </div>
+            )
+          )}
         </div>
       </section>
     </>

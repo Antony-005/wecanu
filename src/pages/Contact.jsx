@@ -1,6 +1,7 @@
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
-import { Mail, Phone, MapPin, AtSign, XIcon, PlaySquare, Users, Music2 } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaXTwitter, FaYoutube, FaFacebook, FaTiktok } from "react-icons/fa6";
 import { club, socials, contactPatron } from "../data/content";
 
 export default function Contact() {
@@ -43,11 +44,11 @@ export default function Contact() {
 
         <p className="font-display text-lg font-semibold text-ink mb-4">Follow WECANU</p>
         <div className="flex gap-5">
-          <a href={socials.instagram} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><AtSign size={24} /></a>
-          <a href={socials.x} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><XIcon size={24} /></a>
-          <a href={socials.youtube} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><PlaySquare size={24} /></a>
-          <a href={socials.facebook} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><Users size={24} /></a>
-          <a href={socials.tiktok} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><Music2 size={24} /></a>
+          <a href={socials.instagram} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><FaInstagram size={24} /></a>
+          <a href={socials.x} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><FaXTwitter size={24} /></a>
+          <a href={socials.youtube} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><FaYoutube size={24} /></a>
+          <a href={socials.facebook} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><FaFacebook size={24} /></a>
+          <a href={socials.tiktok} target="_blank" rel="noreferrer" className="text-ink/60 hover:text-ember"><FaTiktok size={24} /></a>
         </div>
       </section>
     </>

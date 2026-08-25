@@ -156,16 +156,21 @@ export const activities = [
   { title: "Green Week", cadence: "Annual flagship event", blurb: "WECANU's biggest event of the year, a week of conservation campaigns, activities, and the crowning of Mr & Miss ANU Environment." },
 ];
 
+// URLs verified via web search where possible. GAYO, Tony Wild, and KIUESA
+// don't have a clearly confirmed official website (KIUESA in particular
+// appears to operate mainly through social media) — url is null for those,
+// so the About page renders them as plain text instead of a broken/wrong
+// link. Send Antony the real links if you have them.
 export const partners = [
-  "Giraffe Centre",
-  "Wildlife Clubs of Kenya",
-  "Tony Wild",
-  "Nature Kenya",
-  "Kenya Wildlife Service",
-  "Friends of Nairobi National Park",
-  "GAYO",
-  "Wildlife Direct",
-  "KIUESA (Kenya Inter University Environmental Students Association)",
+  { name: "Giraffe Centre", url: "https://www.giraffecentre.org" },
+  { name: "Wildlife Clubs of Kenya", url: "https://www.wildlifeclubsofkenya.or.ke" },
+  { name: "Tony Wild", url: null },
+  { name: "Nature Kenya", url: "https://naturekenya.org" },
+  { name: "Kenya Wildlife Service", url: "https://www.kws.go.ke" },
+  { name: "Friends of Nairobi National Park", url: "https://www.fonnap.com" },
+  { name: "GAYO", url: null },
+  { name: "Wildlife Direct", url: "https://wildlifedirect.org" },
+  { name: "KIUESA (Kenya Inter University Environmental Students Association)", url: null },
 ];
 
 export const projects = [
@@ -204,9 +209,8 @@ export const contactPatron = {
   phone: "+254 715 042 391",
 };
 
-// TODO: replace with your real portfolio URL and preferred contact email.
 export const builder = {
-  name: "Antony",
-  portfolio: "https://your-portfolio-url.com",
-  email: "you@example.com",
+  name: "Antony Ochieng",
+  portfolio: "https://antonyochieng.co.ke",
+  email: "you@example.com", // TODO: swap in your preferred contact email
 };
