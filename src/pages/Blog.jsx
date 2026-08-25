@@ -5,12 +5,12 @@ const posts = [
   {
     title: "Welcome to the new WECANU site",
     date: "Coming soon",
-    excerpt: "Placeholder post — replace with real club news, recaps, and announcements.",
+    excerpt: ".",
   },
   {
     title: "Green Week is around the corner",
     date: "Coming soon",
-    excerpt: "Placeholder post — replace with real club news, recaps, and announcements.",
+    excerpt: "",
   },
 ];
 
@@ -20,7 +20,7 @@ export default function Blog() {
       <PageHero
         eyebrow="Club news"
         title="Blog"
-        subtitle="Recaps, announcements, and updates from WECANU — placeholder posts for now."
+        subtitle=""
       />
 
       <section className="max-w-3xl mx-auto px-5 py-16">

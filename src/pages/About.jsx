@@ -1,6 +1,7 @@
-import PageHero from "../components/PageHero";
+﻿import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
 import { club, meetingSchedule, partners } from "../data/content";
+import { Download } from "lucide-react";
 
 export default function About() {
   return (
@@ -42,6 +43,23 @@ export default function About() {
           which brings recognition and access to forums and activities run by the Kenya
           Wildlife Service and WCK.
         </p>
+
+        <LeafDivider className="my-12 max-w-xs" />
+
+        <h2 className="font-display text-2xl font-semibold text-ink">Club constitution</h2>
+        <p className="mt-4 text-ink/80 leading-relaxed">
+          Read WECANU's full constitution — membership rules, office bearer duties, and how
+          the club is run.
+        </p>
+        <a
+          href="/documents/wecanu-constitution.pdf"
+          target="_blank"
+          rel="noreferrer"
+          download
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-fern text-parchment px-6 py-3 font-semibold hover:bg-fern/90 transition-colors"
+        >
+          <Download size={18} /> Download the Constitution (PDF)
+        </a>
 
         <LeafDivider className="my-12 max-w-xs" />
 

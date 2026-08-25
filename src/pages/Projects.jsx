@@ -8,7 +8,7 @@ export default function Projects() {
       <PageHero
         eyebrow="Making an impact"
         title="Projects & Initiatives"
-        subtitle="Placeholder content below — Antony will send the real list of ongoing and past projects."
+        subtitle=""
       />
 
       <section className="max-w-4xl mx-auto px-5 py-16">
