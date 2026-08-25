@@ -98,8 +98,8 @@ export const teamsByYear = [
       { role: "Organising Secretary", name: "Vitalis Chirchir" },
       { role: "Treasurer", name: "Clinton Omweri" },
       { role: "Club Welfare & International Students Relation", name: "Kheityna Ishimwe" },
-      { role: "Mr. Environment", name: "Latifa Hassan" },
-      { role: "Miss Environment", name: "Joseph Joshua Sila Jabali" },
+      { role: "Mr. Environment", name: "Joseph Joshua Sila Jabali" },
+      { role: "Miss Environment", name: "Latifa Hassan" },
     ],
   },
 ];

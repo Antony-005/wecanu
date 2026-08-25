@@ -2,6 +2,11 @@
 import LeafDivider from "../components/LeafDivider";
 import { club, meetingSchedule, partners } from "../data/content";
 import { Download } from "lucide-react";
+import { firstImage, nthImage } from "../utils/gallery";
+
+const leadersImages = import.meta.glob("../assets/images/gallery/leaders/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+const heroImg = firstImage(leadersImages);
+const storyImg = nthImage(leadersImages, 1);
 
 export default function About() {
   return (
@@ -10,11 +15,21 @@ export default function About() {
         eyebrow="Since 2009"
         title="About WECANU"
         subtitle="Two clubs, one mission — how a merger became Africa Nazarene University's home for conservation."
+        bgImage={heroImg}
       />
 
       <section className="max-w-4xl mx-auto px-5 py-16">
-        <h2 className="font-display text-2xl font-semibold text-ink">Our story</h2>
-        <p className="mt-4 text-ink/80 leading-relaxed">{club.history}</p>
+        <div className={storyImg ? "grid lg:grid-cols-[1.6fr_1fr] gap-10 items-start" : ""}>
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-ink">Our story</h2>
+            <p className="mt-4 text-ink/80 leading-relaxed">{club.history}</p>
+          </div>
+          {storyImg && (
+            <div className="rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full">
+              <img src={storyImg} alt="" className="w-full h-full object-cover" />
+            </div>
+          )}
+        </div>
 
         <LeafDivider className="my-12 max-w-xs" />
 
