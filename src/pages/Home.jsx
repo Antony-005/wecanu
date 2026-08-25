@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
 import LeafDivider from "../components/LeafDivider";
 import { club, objectives, threeCs, activities } from "../data/content";
-import heroBg from "../assets/logo/logo-orange-bg.jpg";
+import { firstImage, nthImage } from "../utils/gallery";
+
+const generalImages = import.meta.glob("../assets/images/gallery/general/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+const teambuildingImages = import.meta.glob("../assets/images/gallery/teambuilding/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+
+const heroImg = firstImage(generalImages);
+const objectivesImg = nthImage(teambuildingImages, 0);
+const activitiesImg = nthImage(teambuildingImages, 1);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -15,6 +22,13 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-canopy text-parchment">
+        {heroImg && (
+          <img
+            src={heroImg}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <div
           className="absolute inset-0 opacity-[0.14]"
           style={{
@@ -22,6 +36,9 @@ export default function Home() {
               "radial-gradient(circle at 15% 20%, var(--color-fern) 0, transparent 45%), radial-gradient(circle at 85% 0%, var(--color-ember) 0, transparent 40%), radial-gradient(circle at 90% 80%, var(--color-gold) 0, transparent 35%)",
           }}
         />
+        {heroImg && (
+          <div className="absolute inset-0 bg-gradient-to-b from-canopy/75 via-canopy/85 to-canopy/95" />
+        )}
         <div className="relative max-w-6xl mx-auto px-5 pt-24 pb-28 sm:pt-32 sm:pb-36">
           <motion.p
             initial="hidden"
@@ -75,19 +92,28 @@ export default function Home() {
 
       {/* OBJECTIVES */}
       <section className="max-w-6xl mx-auto px-5 py-20">
-        <p className="font-script text-2xl text-fern mb-1">What we're here to do</p>
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink">Our objectives</h2>
-        <LeafDivider className="mt-6 max-w-xs" />
+        <div className={objectivesImg ? "grid lg:grid-cols-[1.6fr_1fr] gap-10 items-start" : ""}>
+          <div>
+            <p className="font-script text-2xl text-fern mb-1">What we're here to do</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink">Our objectives</h2>
+            <LeafDivider className="mt-6 max-w-xs" />
 
-        <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-5">
-          {objectives.map((o, i) => (
-            <div key={i} className="flex gap-4">
-              <span className="font-display text-2xl text-ember/70 leading-none pt-0.5">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="text-ink/85">{o}</p>
+            <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-5">
+              {objectives.map((o, i) => (
+                <div key={i} className="flex gap-4">
+                  <span className="font-display text-2xl text-ember/70 leading-none pt-0.5">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-ink/85">{o}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          {objectivesImg && (
+            <div className="rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full">
+              <img src={objectivesImg} alt="" className="w-full h-full object-cover" />
+            </div>
+          )}
         </div>
       </section>
 
@@ -122,6 +148,12 @@ export default function Home() {
           </Link>
         </div>
         <LeafDivider className="mt-6 max-w-xs" />
+
+        {activitiesImg && (
+          <div className="mt-10 rounded-2xl overflow-hidden aspect-[21/9]">
+            <img src={activitiesImg} alt="" className="w-full h-full object-cover" />
+          </div>
+        )}
 
         <div className="mt-10 grid sm:grid-cols-3 gap-6">
           {activities.slice(0, 3).map((a) => (

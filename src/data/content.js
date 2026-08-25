@@ -28,9 +28,6 @@ export const threeCs = [
   { letter: "C", word: "Community", detail: "A club that pulls in every school at ANU, and reaches beyond campus." },
 ];
 
-// Duties are keyed by role name — must match the `role` strings used in
-// teamsByYear below exactly, or the Team page won't be able to look up
-// the duties text for that card.
 export const executiveRoles = [
   { role: "Chairperson", duties: "Calls and chairs club meetings, keeps the club aligned with its mission, represents WECANU at external meetings and forums." },
   { role: "Vice Chairperson", duties: "Stands in for the Chairperson, represents the club at partner organisations, keeps the other offices running smoothly." },
@@ -48,8 +45,8 @@ export const executiveRoles = [
 
 export const exOfficio = [
   { role: "Patron", name: "John Henry" },
-  { role: "Dean of Students", name: "Dr. Victor Boiyo" },
-  { role: "Alumni Representative", name: "Cliff Donley" },
+  { role: "Dean of Students", name: "David Jones" },
+  { role: "Alumni Representative", name: "Antony Ochieng" },
 ];
 
 export const teamsByYear = [
@@ -156,15 +153,10 @@ export const activities = [
   { title: "Green Week", cadence: "Annual flagship event", blurb: "WECANU's biggest event of the year, a week of conservation campaigns, activities, and the crowning of Mr & Miss ANU Environment." },
 ];
 
-// URLs verified via web search where possible. GAYO, Tony Wild, and KIUESA
-// don't have a clearly confirmed official website (KIUESA in particular
-// appears to operate mainly through social media) — url is null for those,
-// so the About page renders them as plain text instead of a broken/wrong
-// link. Send Antony the real links if you have them.
 export const partners = [
   { name: "Giraffe Centre", url: "https://www.giraffecentre.org" },
   { name: "Wildlife Clubs of Kenya", url: "https://www.wildlifeclubsofkenya.or.ke" },
-  { name: "Tony Wild", url: null },
+  { name: "Tony Wild", url: "https://www.tonywild.co.ke" },
   { name: "Nature Kenya", url: "https://naturekenya.org" },
   { name: "Kenya Wildlife Service", url: "https://www.kws.go.ke" },
   { name: "Friends of Nairobi National Park", url: "https://www.fonnap.com" },
@@ -212,5 +204,5 @@ export const contactPatron = {
 export const builder = {
   name: "Antony Ochieng",
   portfolio: "https://antonyochieng.co.ke",
-  email: "you@example.com", // TODO: swap in your preferred contact email
+  email: "antoniyo005@gmail.com", 
 };
