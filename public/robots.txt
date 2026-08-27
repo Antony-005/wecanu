@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wecanu.co.ke/sitemap.xml
+Sitemap: https://www.wecanu.co.ke/sitemap.xml
