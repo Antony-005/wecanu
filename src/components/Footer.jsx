@@ -20,9 +20,13 @@ export default function Footer() {
           <h4 className="font-display text-lg mb-3 text-gold">Explore</h4>
           <ul className="space-y-2 text-sm text-parchment/80">
             <li><Link to="/about" className="hover:text-parchment">About the club</Link></li>
-            <li><Link to="/projects" className="hover:text-parchment">Projects & initiatives</Link></li>
-            <li><Link to="/events" className="hover:text-parchment">Events</Link></li>
+            <li><Link to="/activities" className="hover:text-parchment">Projects, events & news</Link></li>
             <li><Link to="/membership" className="hover:text-parchment">Become a member</Link></li>
+            <li>
+              <a href="https://www.anu.ac.ke/" target="_blank" rel="noreferrer" className="hover:text-parchment">
+                Africa Nazarene University ↗
+              </a>
+            </li>
           </ul>
         </div>
 

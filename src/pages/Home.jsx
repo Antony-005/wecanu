@@ -143,7 +143,7 @@ export default function Home() {
             <p className="font-script text-2xl text-fern mb-1">Out in the field</p>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink">What we get up to</h2>
           </div>
-          <Link to="/events" className="text-fern font-semibold inline-flex items-center gap-1.5 hover:underline">
+          <Link to="/activities" className="text-fern font-semibold inline-flex items-center gap-1.5 hover:underline">
             See all activities <ArrowRight size={16} />
           </Link>
         </div>

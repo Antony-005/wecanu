@@ -6,11 +6,8 @@ import logo from "../assets/logo/logo-white-bg.jpg";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
-  { to: "/events", label: "Events" },
+  { to: "/activities", label: "Activities" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/videos", label: "Videos" },
-  { to: "/blog", label: "News" },
   { to: "/team", label: "Team" },
   { to: "/contact", label: "Contact" },
 ];
@@ -23,9 +20,6 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-5 flex items-center justify-between h-16">
         <NavLink to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <img src={logo} alt="WECANU logo" className="h-10 w-auto rounded-sm" />
-          <span className="font-display font-semibold text-ink text-lg hidden sm:block">
-            WECANU
-          </span>
         </NavLink>
 
         <nav className="hidden lg:flex items-center gap-6 font-body text-sm">

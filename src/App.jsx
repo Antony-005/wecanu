@@ -1,14 +1,11 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Events from "./pages/Events";
+import Activities from "./pages/Activities";
 import Gallery from "./pages/Gallery";
-import Videos from "./pages/Videos";
-import Blog from "./pages/Blog";
 import Team from "./pages/Team";
 import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
@@ -43,11 +40,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/projects" element={<Navigate to="/activities" replace />} />
+          <Route path="/events" element={<Navigate to="/activities" replace />} />
+          <Route path="/blog" element={<Navigate to="/activities" replace />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/videos" element={<Navigate to="/gallery" replace />} />
           <Route path="/team" element={<Team />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/contact" element={<Contact />} />
