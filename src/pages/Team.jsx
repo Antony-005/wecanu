@@ -19,7 +19,7 @@ export default function Team() {
        <SEO
          path="/team"
          title="Leadership & Team"
-         description="Meet WECANU's elected leadership — annual rosters from 2022 to 2026, plus the club's Patron, Dean of Students, and Alumni Representative."
+         description="Meet WECANU's elected leadership; annual rosters from 2022 to 2026, plus the club's Patron, Dean of Students, and Alumni Representative."
        />
        <PageHero
          eyebrow="Elected every September"

@@ -14,7 +14,7 @@ export default function Projects() {
       <SEO
         path="/projects"
         title="Projects & Initiatives"
-        description="WECANU's ongoing conservation projects — tree adoption, citizen science with partner organisations, and year-round environmental competitions."
+        description="WECANU's ongoing conservation projects; tree adoption, citizen science with partner organisations, and year-round environmental competitions."
       />
       <PageHero
         eyebrow="Making an impact"

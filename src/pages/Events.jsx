@@ -14,12 +14,12 @@ export default function Events() {
       <SEO
         path="/events"
         title="Events & Activities"
-        description="From weekly meetings to Green Week — clean-ups, tree planting, citizen science, trips, and bonfire nights at WECANU."
+        description="From weekly meetings to Green Week, clean-ups, tree planting, citizen science, trips, and bonfire nights at WECANU."
       />
       <PageHero
         eyebrow="Out in the field"
         title="Events & Activities"
-        subtitle="What WECANU does year-round — from weekly meetings to Green Week."
+        subtitle="What WECANU does year-round from weekly meetings to Green Week."
         bgImage={heroImg}
       />
 

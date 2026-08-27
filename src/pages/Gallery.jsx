@@ -3,10 +3,6 @@ import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
 import SEO from "../components/SEO";
 
-// Each category auto-loads every image dropped into its folder — no code
-// changes needed when you add more photos, as long as the filename matches
-// the pattern you told Antony (e.g. general1.jpg, general2.jpg, ...) and it
-// lands in the right folder below.
 const categoryFolders = {
   General: import.meta.glob("../assets/images/gallery/general/*.{jpg,jpeg,JPG,JPEG}", { eager: true }),
   "Clean-Ups & Tree Planting": import.meta.glob("../assets/images/gallery/cleanups/*.{jpg,jpeg,JPG,JPEG}", { eager: true }),
@@ -63,7 +59,7 @@ export default function Gallery() {
 
         {images.length === 0 ? (
           <p className="text-ink/50 text-sm">
-            No photos in this category yet — drop files into{" "}
+            No photos in this category yet, drop files into{" "}
             <code className="bg-parchment-dim px-1.5 py-0.5 rounded">
               src/assets/images/gallery/
             </code>{" "}

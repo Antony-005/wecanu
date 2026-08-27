@@ -14,7 +14,7 @@ export default function About() {
       <PageHero
         eyebrow="Since 2009"
         title="About WECANU"
-        subtitle="Two clubs, one mission — how a merger became Africa Nazarene University's home for conservation."
+        subtitle="Two clubs, one mission - how a merger became Africa Nazarene University's home for conservation."
         bgImage={heroImg}
       />
 
@@ -49,7 +49,7 @@ export default function About() {
         <h2 className="font-display text-2xl font-semibold text-ink">A university-wide club</h2>
         <p className="mt-4 text-ink/80 leading-relaxed">
           WECANU sits within Students Services, guided by the Environment and Natural
-          Resource Management Department, but membership isn't limited to one school —
+          Resource Management Department, but membership isn't limited to one school -
           students from Law, Religion, Science &amp; Technology, Business, and Humanities &amp;
           Social Sciences all take part.
         </p>
@@ -63,7 +63,7 @@ export default function About() {
 
         <h2 className="font-display text-2xl font-semibold text-ink">Club constitution</h2>
         <p className="mt-4 text-ink/80 leading-relaxed">
-          Read WECANU's full constitution — membership rules, office bearer duties, and how
+          Read WECANU's full constitution: Membership rules, office bearer duties, and how
           the club is run.
         </p>
         <a

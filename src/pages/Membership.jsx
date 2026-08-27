@@ -2,8 +2,12 @@ import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
 import SEO from "../components/SEO";
-import { membershipTiers } from "../data/content";
+import { membershipTiers, club } from "../data/content";
 import { CheckCircle2 } from "lucide-react";
+import { firstImage } from "../utils/gallery";
+
+const teambuildingImages = import.meta.glob("../assets/images/gallery/teambuilding/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+const heroImg = firstImage(teambuildingImages);
 
 export default function Membership() {
   const [form, setForm] = useState({ name: "", admission: "", course: "", year: "" });
@@ -15,23 +19,31 @@ export default function Membership() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // TODO: wire this up to EmailJS (or another backend) to actually send
-    // the application through — same pattern used on your other client sites.
-    console.log("Membership application:", form);
+
+    const subject = encodeURIComponent(`WECANU Membership Application — ${form.name}`);
+    const body = encodeURIComponent(
+      `Full name: ${form.name}\n` +
+      `Admission number: ${form.admission}\n` +
+      `Course: ${form.course}\n` +
+      `Year of study: ${form.year}`
+    );
+
+    window.location.href = `mailto:${club.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
-     return (
-     <>
-       <SEO
-         path="/membership"
-         title="Become a Member"
-         description="Join WECANU — open to current ANU students, staff, and alumni passionate about wildlife and environmental conservation."
-       />
-       <PageHero
-         eyebrow="Get involved"
+  return (
+    <>
+      <SEO
+        path="/membership"
+        title="Become a Member"
+        description="Join WECANU; open to current ANU students, staff, and alumni passionate about wildlife and environmental conservation."
+      />
+      <PageHero
+        eyebrow="Get involved"
         title="Become a member"
         subtitle="Open to any current ANU student, staff member, or alumnus passionate about conservation."
+        bgImage={heroImg}
       />
 
       <section className="max-w-5xl mx-auto px-5 py-16 grid lg:grid-cols-2 gap-14">
@@ -64,14 +76,20 @@ export default function Membership() {
             <div className="bg-fern/10 border border-fern/30 rounded-2xl p-8 text-center">
               <CheckCircle2 className="mx-auto text-fern" size={36} />
               <p className="mt-3 font-display text-xl font-semibold text-ink">
-                Application received
+                Almost done!
               </p>
               <p className="mt-1 text-ink/70 text-sm">
-                We'll follow up by email. Karibu WECANU!
+                Your email app should have opened with your application ready to go -
+                just hit send there to complete it. If nothing opened, email{" "}
+                {club.email} directly with your details.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              <p className="text-xs text-ink/50 bg-parchment-dim rounded-lg px-4 py-3">
+                Submitting opens your email app with everything pre-filled, just hit
+                send there to finish.
+              </p>
               <div>
                 <label className="block text-sm font-medium text-ink/80 mb-1.5">Full name</label>
                 <input
