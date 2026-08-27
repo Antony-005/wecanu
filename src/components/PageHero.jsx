@@ -1,9 +1,19 @@
 import LeafDivider from "./LeafDivider";
 
-export default function PageHero({ eyebrow, title, subtitle }) {
+export default function PageHero({ eyebrow, title, subtitle, bgImage }) {
   return (
-    <section className="bg-canopy text-parchment">
-      <div className="max-w-6xl mx-auto px-5 pt-16 pb-14">
+    <section className="relative overflow-hidden bg-canopy text-parchment">
+      {bgImage && (
+        <>
+          <img
+            src={bgImage}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-canopy/75 via-canopy/85 to-canopy/95" />
+        </>
+      )}
+      <div className="relative max-w-6xl mx-auto px-5 pt-16 pb-14">
         {eyebrow && (
           <p className="font-script text-2xl text-gold mb-1">{eyebrow}</p>
         )}

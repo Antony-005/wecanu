@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 
 const posts = [
   {
@@ -14,10 +15,15 @@ const posts = [
   },
 ];
 
-export default function Blog() {
-  return (
-    <>
-      <PageHero
+   export default function Blog() {
+     return (
+       <>
+         <SEO
+           path="/blog"
+           title="Blog"
+           description="News, recaps, and announcements from WECANU."
+         />
+         <PageHero
         eyebrow="Club news"
         title="Blog"
         subtitle=""

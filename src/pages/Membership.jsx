@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { membershipTiers } from "../data/content";
 import { CheckCircle2 } from "lucide-react";
 
@@ -20,10 +21,15 @@ export default function Membership() {
     setSubmitted(true);
   }
 
-  return (
-    <>
-      <PageHero
-        eyebrow="Get involved"
+     return (
+     <>
+       <SEO
+         path="/membership"
+         title="Become a Member"
+         description="Join WECANU — open to current ANU students, staff, and alumni passionate about wildlife and environmental conservation."
+       />
+       <PageHero
+         eyebrow="Get involved"
         title="Become a member"
         subtitle="Open to any current ANU student, staff member, or alumnus passionate about conservation."
       />

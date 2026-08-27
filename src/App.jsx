@@ -7,10 +7,12 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
+import Videos from "./pages/Videos";
 import Blog from "./pages/Blog";
 import Team from "./pages/Team";
 import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
+import { initAnalytics, trackPageView } from "./utils/analytics";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,10 +22,22 @@ function ScrollToTop() {
   return null;
 }
 
+function Analytics() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col font-body">
       <ScrollToTop />
+      <Analytics />
       <Navbar />
       <main className="flex-1">
         <Routes>
@@ -32,6 +46,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/team" element={<Team />} />
           <Route path="/membership" element={<Membership />} />

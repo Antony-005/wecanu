@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { projects } from "../data/content";
 import { firstImage, nthImage } from "../utils/gallery";
 
@@ -10,6 +11,11 @@ const bannerImg = nthImage(cleanupsImages, 1);
 export default function Projects() {
   return (
     <>
+      <SEO
+        path="/projects"
+        title="Projects & Initiatives"
+        description="WECANU's ongoing conservation projects — tree adoption, citizen science with partner organisations, and year-round environmental competitions."
+      />
       <PageHero
         eyebrow="Making an impact"
         title="Projects & Initiatives"

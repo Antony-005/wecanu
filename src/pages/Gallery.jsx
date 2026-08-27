@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 
 // Each category auto-loads every image dropped into its folder — no code
 // changes needed when you add more photos, as long as the filename matches
@@ -28,10 +29,15 @@ export default function Gallery() {
   const [active, setActive] = useState(categories[0]);
   const images = imagesFor(active);
 
-  return (
-    <>
-      <PageHero
-        eyebrow="Moments from the field"
+     return (
+     <>
+       <SEO
+         path="/gallery"
+         title="Gallery"
+         description="Photos from WECANU club events, clean-ups, bonfire nights, team building, and Green Week."
+       />
+       <PageHero
+         eyebrow="Moments from the field"
         title="Gallery"
         subtitle="Photos from club events, clean-ups, bonfire nights, and Green Week."
       />
@@ -67,7 +73,7 @@ export default function Gallery() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {images.map((src, i) => (
               <div key={i} className="aspect-square rounded-xl overflow-hidden border border-ink/10">
-                <img src={src} alt={`${active} ${i + 1}`} className="w-full h-full object-cover" />
+                <img src={src} alt={`WECANU ${active} photo ${i + 1}`} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

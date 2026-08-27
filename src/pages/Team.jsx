@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { executiveRoles, exOfficio, teamsByYear } from "../data/content";
 
 // Duties come from executiveRoles (fixed, role-based).
@@ -13,10 +14,15 @@ export default function Team() {
   const [activeYear, setActiveYear] = useState(teamsByYear[0]?.year);
   const roster = teamsByYear.find((t) => t.year === activeYear);
 
-  return (
-    <>
-      <PageHero
-        eyebrow="Elected every September"
+     return (
+     <>
+       <SEO
+         path="/team"
+         title="Leadership & Team"
+         description="Meet WECANU's elected leadership — annual rosters from 2022 to 2026, plus the club's Patron, Dean of Students, and Alumni Representative."
+       />
+       <PageHero
+         eyebrow="Elected every September"
         title="Leadership & Team"
         subtitle="Eight offices, re-elected each year. Browse past and present rosters below."
       />

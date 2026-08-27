@@ -1,3 +1,16 @@
+// TODO: update siteUrl once the real .co.ke domain is live (currently a
+// placeholder). This value feeds canonical URLs, Open Graph tags, and
+// sitemap.xml — used by src/components/SEO.jsx on every page.
+export const siteConfig = {
+  siteName: "WECANU",
+  siteUrl: "https://wecanu.co.ke",
+  defaultTitle: "WECANU — Wildlife & Environmental Club, Africa Nazarene University",
+  defaultDescription:
+    "The Wildlife & Environmental Club of Africa Nazarene University (WECANU) — conservation, clean-ups, tree planting, and Green Week since 2009. Don't Be Greedy, Be Green.",
+  ogImage: "https://wecanu.co.ke/og-image.jpg", // TODO: replace with a real 1200x630 image once available
+  gaMeasurementId: "G-S0XZKCCL54",
+};
+
 export const club = {
   fullName: "Wildlife & Environmental Club of Africa Nazarene University",
   acronym: "WECANU",

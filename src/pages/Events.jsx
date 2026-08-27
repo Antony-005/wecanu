@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { activities } from "../data/content";
 import { firstImage, nthImage } from "../utils/gallery";
 
@@ -10,6 +11,11 @@ const bannerImg = nthImage(bonfireImages, 1);
 export default function Events() {
   return (
     <>
+      <SEO
+        path="/events"
+        title="Events & Activities"
+        description="From weekly meetings to Green Week — clean-ups, tree planting, citizen science, trips, and bonfire nights at WECANU."
+      />
       <PageHero
         eyebrow="Out in the field"
         title="Events & Activities"
