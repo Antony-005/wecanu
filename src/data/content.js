@@ -1,12 +1,9 @@
-// TODO: update siteUrl once the real .co.ke domain is live (currently a
-// placeholder). This value feeds canonical URLs, Open Graph tags, and
-// sitemap.xml — used by src/components/SEO.jsx on every page.
-export const siteConfig = {
+﻿export const siteConfig = {
   siteName: "WECANU",
   siteUrl: "https://www.wecanu.co.ke",
-  defaultTitle: "WECANU — Wildlife & Environmental Club, Africa Nazarene University",
+  defaultTitle: "WECANU: Wildlife & Environmental Club, Africa Nazarene University",
   defaultDescription:
-    "The Wildlife & Environmental Club of Africa Nazarene University (WECANU) — conservation, clean-ups, tree planting, and Green Week since 2009. Don't Be Greedy, Be Green.",
+    "The Wildlife & Environmental Club of Africa Nazarene University (WECANU) leads conservation, clean-ups, tree planting, and Green Week since 2009. Don't Be Greedy, Be Green.",
   ogImage: "https://www.wecanu.co.ke/og-image.jpg", // TODO: replace with a real 1200x630 image once available
   gaMeasurementId: "G-S0XZKCCL54",
 };
@@ -20,9 +17,9 @@ export const club = {
   address: "P.O. Box 53067, Nairobi, Kenya",
   mission: "Leave the world better than we found it.",
   vision:
-    "To be the most recommended club not just in our institution but also globally — because what we get involved in incorporates the three C's: character, competence and community in all club activities.",
+    "To be the most recommended club not just in our institution but also globally, because what we get involved in incorporates the three C's: character, competence and community in all club activities.",
   history:
-    "WECANU began in 2009 as two separate entities — the Wildlife Club, led by Mrs Beth Wokabi, and the Environmental Club, led by Professor Isaac Kigatiira — which later merged into one club under the guidance of the Environment and Natural Resource Management Department. The club sits within Students Services and draws members from every school at ANU: Law, Religion, Science & Technology, Business, and Humanities & Social Sciences.",
+    "WECANU began in 2009 as two separate entities: the Wildlife Club, led by Mrs Beth Wokabi, and the Environmental Club, led by Professor Isaac Kigatiira. The two later merged into one club under the guidance of the Environment and Natural Resource Management Department. The club sits within Students Services and draws members from every school at ANU: Law, Religion, Science & Technology, Business, and Humanities & Social Sciences.",
 };
 
 export const objectives = [
@@ -111,8 +108,8 @@ export const teamsByYear = [
       { role: "Organising Secretary", name: "Vitalis Chirchir" },
       { role: "Treasurer", name: "Clinton Omweri" },
       { role: "Club Welfare & International Students Relation", name: "Kheityna Ishimwe" },
-      { role: "Mr. Environment", name: "Joseph Joshua Sila Jabali" },
-      { role: "Miss Environment", name: "Latifa Hassan" },
+      { role: "Mr. Environment", name: "Latifa Hassan" },
+      { role: "Miss Environment", name: "Joseph Joshua Sila Jabali" },
     ],
   },
 ];
@@ -149,11 +146,11 @@ export const membershipTiers = [
 ];
 
 export const meetingSchedule = [
-  { day: "Tuesday", time: "4:00 PM", where: "TBC", type: "Weekly club meeting" },
+  { day: "Tuesday", time: "4:00 PM", where: "", type: "Weekly club meeting" },
 ];
 
 export const activities = [
-  { title: "Weekly Club Meetings", cadence: "Every Tuesday, 4:00 PM", blurb: "The club's regular gathering point — updates, planning, and where new members get folded in." },
+  { title: "Weekly Club Meetings", cadence: "Every Tuesday, 4:00 PM", blurb: "The club's regular gathering point for updates, planning, and welcoming new members." },
   { title: "Clean-Ups", cadence: "On & off campus", blurb: "Hands-on litter and waste clean-up drives around ANU and the wider community." },
   { title: "Tree Planting", cadence: "On & off campus", blurb: "Restoring green cover through planting drives on and beyond campus." },
   { title: "Citizen Science", cadence: "e.g. The Great Southern Bioblitz", blurb: "Members contribute real biodiversity data using the iNaturalist app." },
@@ -169,7 +166,7 @@ export const activities = [
 export const partners = [
   { name: "Giraffe Centre", url: "https://www.giraffecentre.org" },
   { name: "Wildlife Clubs of Kenya", url: "https://www.wildlifeclubsofkenya.or.ke" },
-  { name: "Tony Wild", url: "https://www.tonywild.co.ke" },
+  { name: "Tony Wild", url: null },
   { name: "Nature Kenya", url: "https://naturekenya.org" },
   { name: "Kenya Wildlife Service", url: "https://www.kws.go.ke" },
   { name: "Friends of Nairobi National Park", url: "https://www.fonnap.com" },
@@ -217,5 +214,5 @@ export const contactPatron = {
 export const builder = {
   name: "Antony Ochieng",
   portfolio: "https://antonyochieng.co.ke",
-  email: "antoniyo005@gmail.com", 
+  email: "you@example.com", // TODO: swap in your preferred contact email
 };

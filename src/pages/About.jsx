@@ -1,5 +1,6 @@
 ﻿import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { club, meetingSchedule, partners } from "../data/content";
 import { Download } from "lucide-react";
 import { firstImage, nthImage } from "../utils/gallery";
@@ -11,10 +12,15 @@ const storyImg = nthImage(leadersImages, 1);
 export default function About() {
   return (
     <>
+      <SEO
+        path="/about"
+        title="About"
+        description="WECANU began in 2009 when two clubs merged into one. Learn our mission, vision, and how the club runs today."
+      />
       <PageHero
         eyebrow="Since 2009"
         title="About WECANU"
-        subtitle="Two clubs, one mission - how a merger became Africa Nazarene University's home for conservation."
+        subtitle="Two clubs, one mission: how a merger became Africa Nazarene University's home for conservation."
         bgImage={heroImg}
       />
 
@@ -49,7 +55,7 @@ export default function About() {
         <h2 className="font-display text-2xl font-semibold text-ink">A university-wide club</h2>
         <p className="mt-4 text-ink/80 leading-relaxed">
           WECANU sits within Students Services, guided by the Environment and Natural
-          Resource Management Department, but membership isn't limited to one school -
+          Resource Management Department, but membership isn't limited to one school:
           students from Law, Religion, Science &amp; Technology, Business, and Humanities &amp;
           Social Sciences all take part.
         </p>
@@ -63,7 +69,7 @@ export default function About() {
 
         <h2 className="font-display text-2xl font-semibold text-ink">Club constitution</h2>
         <p className="mt-4 text-ink/80 leading-relaxed">
-          Read WECANU's full constitution: Membership rules, office bearer duties, and how
+          Read WECANU's full constitution: membership rules, office bearer duties, and how
           the club is run.
         </p>
         <a
@@ -84,7 +90,10 @@ export default function About() {
             <div key={m.day} className="border border-ink/10 rounded-xl p-5">
               <p className="text-xs uppercase tracking-wide text-ember font-semibold">{m.type}</p>
               <p className="font-display text-lg font-semibold mt-1 text-ink">{m.day}</p>
-              <p className="text-ink/65 text-sm mt-1">{m.time} · {m.where}</p>
+              <p className="text-ink/65 text-sm mt-1">
+                {m.time}
+                {m.where ? ` at ${m.where}` : ""}
+              </p>
             </div>
           ))}
         </div>

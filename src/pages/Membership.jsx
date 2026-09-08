@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
 import SEO from "../components/SEO";
@@ -20,7 +20,7 @@ export default function Membership() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`WECANU Membership Application — ${form.name}`);
+    const subject = encodeURIComponent(`WECANU Membership Application: ${form.name}`);
     const body = encodeURIComponent(
       `Full name: ${form.name}\n` +
       `Admission number: ${form.admission}\n` +
@@ -37,7 +37,7 @@ export default function Membership() {
       <SEO
         path="/membership"
         title="Become a Member"
-        description="Join WECANU; open to current ANU students, staff, and alumni passionate about wildlife and environmental conservation."
+        description="Join WECANU. Open to current ANU students, staff, and alumni passionate about wildlife and environmental conservation."
       />
       <PageHero
         eyebrow="Get involved"
@@ -79,15 +79,15 @@ export default function Membership() {
                 Almost done!
               </p>
               <p className="mt-1 text-ink/70 text-sm">
-                Your email app should have opened with your application ready to go -
-                just hit send there to complete it. If nothing opened, email{" "}
+                Your email app should have opened with your application ready to go.
+                Just hit send there to complete it. If nothing opened, email{" "}
                 {club.email} directly with your details.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <p className="text-xs text-ink/50 bg-parchment-dim rounded-lg px-4 py-3">
-                Submitting opens your email app with everything pre-filled, just hit
+                Submitting opens your email app with everything pre-filled. Just hit
                 send there to finish.
               </p>
               <div>

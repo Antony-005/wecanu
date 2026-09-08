@@ -1,13 +1,23 @@
-import PageHero from "../components/PageHero";
+﻿import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaYoutube, FaFacebook, FaTiktok } from "react-icons/fa6";
 import { club, socials, contactPatron } from "../data/content";
+import { firstImage } from "../utils/gallery";
+
+const walksImages = import.meta.glob("../assets/images/gallery/walks/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+const heroImg = firstImage(walksImages);
 
 export default function Contact() {
   return (
     <>
-      <PageHero eyebrow="Reach out" title="Contact us" />
+      <SEO
+        path="/contact"
+        title="Contact"
+        description="Get in touch with WECANU: email, the club Patron's contact, and our social media channels."
+      />
+      <PageHero eyebrow="Reach out" title="Contact us" bgImage={heroImg} />
 
       <section className="max-w-3xl mx-auto px-5 py-16">
         <LeafDivider className="mb-10 max-w-xs" />
@@ -27,7 +37,7 @@ export default function Contact() {
             <Phone className="text-ember shrink-0 mt-1" size={20} />
             <div>
               <p className="font-display text-lg font-semibold text-ink">Patron</p>
-              <p className="text-ink/70">{contactPatron.name} — {contactPatron.phone}</p>
+              <p className="text-ink/70">{contactPatron.name}: {contactPatron.phone}</p>
             </div>
           </div>
 

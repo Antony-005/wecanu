@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import PageHero from "../components/PageHero";
 import LeafDivider from "../components/LeafDivider";
 import SEO from "../components/SEO";
@@ -11,19 +11,6 @@ const bonfireImages = import.meta.glob("../assets/images/gallery/bonfire/*.{jpg,
 const heroImg = firstImage(cleanupsImages);
 const projectsBannerImg = nthImage(cleanupsImages, 1);
 const eventsBannerImg = nthImage(bonfireImages, 1);
-
-const posts = [
-  {
-    title: "Welcome to the new WECANU site",
-    date: "Coming soon",
-    excerpt: ".",
-  },
-  {
-    title: "Green Week is around the corner",
-    date: "Coming soon",
-    excerpt: "",
-  },
-];
 
 const tabs = ["Projects", "Events", "News"];
 
@@ -77,14 +64,13 @@ function EventsPanel() {
 
 function NewsPanel() {
   return (
-    <div className="max-w-3xl space-y-8">
-      {posts.map((p) => (
-        <article key={p.title} className="border-b border-ink/10 pb-8">
-          <p className="text-xs uppercase tracking-wide text-ember font-semibold">{p.date}</p>
-          <h3 className="font-display text-2xl font-semibold mt-1 text-ink">{p.title}</h3>
-          <p className="mt-2 text-ink/70">{p.excerpt}</p>
-        </article>
-      ))}
+    <div className="max-w-3xl">
+      <div className="rounded-2xl border border-ink/10 bg-parchment-dim p-8 text-center">
+        <p className="text-ink/70">
+          WECANU has not published any news updates yet. Recaps and announcements from
+          club activities will appear here once posted.
+        </p>
+      </div>
     </div>
   );
 }
@@ -97,7 +83,7 @@ export default function Activities() {
       <SEO
         path="/activities"
         title="Projects, Events & News"
-        description="WECANU's conservation projects, year-round events and activities, and the latest club news — all in one place."
+        description="WECANU's conservation projects, year-round events and activities, and the latest club news, all in one place."
       />
       <PageHero
         eyebrow="What we're doing"

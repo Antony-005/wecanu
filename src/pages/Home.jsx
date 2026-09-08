@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
 import LeafDivider from "../components/LeafDivider";
+import SEO from "../components/SEO";
 import { club, objectives, threeCs, activities } from "../data/content";
 import { firstImage, nthImage } from "../utils/gallery";
 
@@ -20,6 +21,10 @@ const fadeUp = {
 export default function Home() {
   return (
     <>
+      <SEO
+        path="/"
+        description="Official website of WECANU, the Wildlife & Environmental Club of Africa Nazarene University. Conservation, clean-ups, tree planting, citizen science, and Green Week since 2009."
+      />
       {/* HERO */}
       <section className="relative overflow-hidden bg-canopy text-parchment">
         {heroImg && (
