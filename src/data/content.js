@@ -4,7 +4,7 @@
   defaultTitle: "WECANU: Wildlife & Environmental Club, Africa Nazarene University",
   defaultDescription:
     "The Wildlife & Environmental Club of Africa Nazarene University (WECANU) leads conservation, clean-ups, tree planting, and Green Week since 2009. Don't Be Greedy, Be Green.",
-  ogImage: "https://www.wecanu.co.ke/og-image.jpg", // TODO: replace with a real 1200x630 image once available
+  ogImage: "https://www.wecanu.co.ke/og-image.jpg", 
   gaMeasurementId: "G-S0XZKCCL54",
 };
 
@@ -108,8 +108,8 @@ export const teamsByYear = [
       { role: "Organising Secretary", name: "Vitalis Chirchir" },
       { role: "Treasurer", name: "Clinton Omweri" },
       { role: "Club Welfare & International Students Relation", name: "Kheityna Ishimwe" },
-      { role: "Mr. Environment", name: "Latifa Hassan" },
-      { role: "Miss Environment", name: "Joseph Joshua Sila Jabali" },
+      { role: "Mr. Environment", name: "Joseph Joshua Sila Jabali" },
+      { role: "Miss Environment", name: "Latifa Hassan" },
     ],
   },
 ];
