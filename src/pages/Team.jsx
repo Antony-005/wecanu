@@ -4,10 +4,28 @@ import LeafDivider from "../components/LeafDivider";
 import SEO from "../components/SEO";
 import { executiveRoles, exOfficio, teamsByYear } from "../data/content";
 import { firstImage } from "../utils/gallery";
+import { teamPhoto } from "../utils/teamPhotos";
 import { UserRound } from "lucide-react";
 
 const leadersImages = import.meta.glob("../assets/images/gallery/leaders/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
 const heroImg = firstImage(leadersImages);
+
+const team2025Images = import.meta.glob("../assets/images/team/2025-26/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+
+const photosByYear = {
+  "2025/26": team2025Images,
+};
+
+const roleSlugs = {
+  "Chairperson": "chairperson",
+  "Vice Chairperson": "vice-chairperson",
+  "Secretary": "secretary",
+  "Organising Secretary": "organising-secretary",
+  "Treasurer": "treasurer",
+  "Club Welfare & International Students Relation": "welfare",
+  "Mr. Environment": "mr-environment",
+  "Miss Environment": "miss-environment",
+};
 
 function dutiesFor(role) {
   return executiveRoles.find((r) => r.role === role);
@@ -16,6 +34,7 @@ function dutiesFor(role) {
 export default function Team() {
   const [activeYear, setActiveYear] = useState(teamsByYear[0]?.year);
   const roster = teamsByYear.find((t) => t.year === activeYear);
+  const yearImages = photosByYear[activeYear];
 
   return (
     <>
@@ -48,19 +67,17 @@ export default function Team() {
           ))}
         </div>
 
-        <p className="mt-4 text-ink/60 text-sm max-w-xl">
-          Officer headshots have not been added yet.
-        </p>
         <LeafDivider className="mt-6 mb-10 max-w-xs" />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {roster?.members.map((m) => {
             const info = dutiesFor(m.role);
+            const photo = yearImages ? teamPhoto(yearImages, roleSlugs[m.role]) : null;
             return (
               <div key={m.role} className="rounded-2xl border border-ink/10 overflow-hidden bg-white">
                 <div className="aspect-square bg-parchment-dim flex items-center justify-center text-ink/25">
-                  {m.photo ? (
-                    <img src={m.photo} alt={m.name || m.role} className="w-full h-full object-cover" />
+                  {photo ? (
+                    <img src={photo} alt={m.name || m.role} className="w-full h-full object-cover" />
                   ) : (
                     <UserRound size={40} strokeWidth={1.5} />
                   )}
