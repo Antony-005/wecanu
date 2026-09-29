@@ -11,9 +11,11 @@ const leadersImages = import.meta.glob("../assets/images/gallery/leaders/*.{jpg,
 const heroImg = firstImage(leadersImages);
 
 const team2025Images = import.meta.glob("../assets/images/team/2025-26/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
+const team2024Images = import.meta.glob("../assets/images/team/2024-25/*.{jpg,jpeg,JPG,JPEG}", { eager: true });
 
 const photosByYear = {
   "2025/26": team2025Images,
+  "2024/25": team2024Images,
 };
 
 const roleSlugs = {
